@@ -3,56 +3,50 @@
     {
       "_id": "stone1",
       "image": "/images/stone1.png",
-      "title": "Midi sundress with shirring detail",
-      "price": 29.9
+      "title": "Stone",
+      "price": 3
     },
     {
       "_id": "stone2",
       "image": "/images/stone2.png",
-      "title": "Midi sundress with ruched front",
-      "price": 18.9
+      "title": "Big stone",
+      "price": 5
     },
     {
       "_id": "stone3",
       "image": "/images/stone3.png",
-      "title": "Midi dress in pink ditsy floral",
-      "price": 14.9
+      "title": "Boulder",
+      "price": 9.9
     },
     {
       "_id": "stone4",
       "image": "/images/stone4.png",
-      "title": "cami maxi dress in polka dot",
-      "price": 25.9
+      "title": "Smooths rock",
+      "price": 15
     },
     {
       "_id": "stone5",
       "image": "/images/stone5.png",
-      "title": "Frill mini dress in yellow polka dot",
-      "price": 10.9
+      "title": "Couple of rocks",
+      "price": 13.4
     },
     {
       "_id": "stone6",
       "image": "/images/stone6.png",
-      "title": "Frill mini dress in yellow polka dot",
-      "price": 10.9
-    },
-    {
-      "_id": "stone7",
-      "image": "/images/stone7.png",
-      "title": "Frill mini dress in yellow polka dot",
-      "price": 10.9
+      "title": "Some garbage",
+      "price": 0.5
     },
     {
       "_id": "stone8",
       "image": "/images/stone8.png",
-      "title": "Frill mini dress in yellow polka dot",
-      "price": 10.9
+      "title": "Stone golem",
+      "price": 249.9
     },
     {
       "_id": "stone9",
       "image": "/images/stone9.png",
-      "title": "Midi tea dress in blue and red spot",
-      "price": 49.9
+      "title": "Rock. Beats scissors",
+      "price": 1
     }
   ]
 }

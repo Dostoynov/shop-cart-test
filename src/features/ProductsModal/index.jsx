@@ -9,9 +9,7 @@ import './style.css'
 
 class ProductsModal extends Component {
   componentDidMount() {
-    console.log('did mount')
     this.props.fetchProducts();
-    console.log(this.props)
   }
 
   render () {
@@ -22,7 +20,7 @@ class ProductsModal extends Component {
               x
             </button>
             {!this.props.products ?
-                (<div>Loading...</div>) :
+                (<div className='loading'>Loading...</div>) :
                 (<ul className="products">
                   {this.props.products.map((product) => (
                       <li key={product._id} className="product">

@@ -1,0 +1,75 @@
+.content {
+    display: flex;
+}
+
+.cart-items {
+    list-style: none;
+    padding: 0 40px;
+}
+
+.cart-items li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.cart-item img {
+    height: 85px;
+}
+
+.price {
+    flex-basis: 6%;
+}
+
+
+.quantity {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 15%;
+}
+
+.quantity .count {
+    width: 22px;
+    padding: 0 20px;
+}
+
+.quantity button {
+    font-size: 25px;
+    transition: 0.1s;
+}
+
+.quantity button:hover {
+    color: #8c8c8c;
+}
+
+.slimButton {
+    background: transparent;
+    border: none;
+    outline: none;
+    font-weight: 800;
+}
+
+.title {
+    position: relative;
+    text-align: center;
+    min-width: 165px;
+}
+
+.total {
+    width: 70px;
+    text-align: center;
+}
+
+.closeButton {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.cart-items .footer {
+    justify-content: flex-end;
+}
+
+.closeButton:before{ content: "\2716"; }

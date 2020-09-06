@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import icon from './assets/shopping-cart.svg';
 import { Provider } from "react-redux";
-import Cart from "./containers/Cart";
+import Cart from "./features/Cart";
 import store from "./store";
 import ProductsModal from "./features/ProductsModal";
 

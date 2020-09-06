@@ -94,24 +94,20 @@ footer {
   align-items: center;
 }
 
-/* width */
 ::-webkit-scrollbar {
   width: 5px;
   border-radius: 3px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
   background: #a4a4a4;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background: #626262;
   border-radius: 3px;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #303030;
 }

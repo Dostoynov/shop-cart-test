@@ -9,7 +9,7 @@
     display: flex;
     justify-content: space-between;
     max-height: 75px;
-    box-shadow: 2px 4px 20px 0px rgba(255, 255, 255, 0.8), 8px 8px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 4px 20px 0 rgba(255, 255, 255, 0.8), 8px 8px 10px rgba(0, 0, 0, 0.2);
 }
 
 .product p, .product div {
@@ -34,4 +34,8 @@
 .close-modal {
     display: block;
     margin-left: auto;
+}
+
+.loading {
+    flex-basis: 100%;
 }
