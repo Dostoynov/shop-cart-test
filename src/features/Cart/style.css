@@ -66,6 +66,7 @@
     position: absolute;
     top: 5px;
     right: 5px;
+    transition: 0.1s;
 }
 
 .cart-items .footer {
@@ -73,3 +74,4 @@
 }
 
 .closeButton:before{ content: "\2716"; }
+.closeButton:hover{color: #8c8c8c}

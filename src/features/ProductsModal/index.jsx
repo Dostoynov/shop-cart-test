@@ -12,6 +12,21 @@ class ProductsModal extends Component {
     this.props.fetchProducts();
   }
 
+  ProductItem = (product) =>
+      <li key={product._id} className="product">
+        <div>
+          <img src={product.image} alt={product.title}/>
+        </div>
+        <p className='product-title'>{product.title}</p>
+        <p className="product-price"> {formatCurrency(product.price)} </p>
+        <button
+            onClick={() => this.props.addToCart(product)}
+            className="primaryBtn"
+        >
+          Add To Cart
+        </button>
+      </li>
+
   render () {
     return (
         <Modal isOpen={this.props.isOpen} onRequestClose={this.props.handleModal}>
@@ -20,24 +35,11 @@ class ProductsModal extends Component {
               x
             </button>
             {!this.props.products ?
-                (<div className='loading'>Loading...</div>) :
-                (<ul className="products">
-                  {this.props.products.map((product) => (
-                      <li key={product._id} className="product">
-                        <div>
-                          <img src={product.image} alt={product.title}/>
-                        </div>
-                        <p className='product-title'>{product.title}</p>
-                        <p className="product-price"> {formatCurrency(product.price)} </p>
-                        <button
-                            onClick={() => this.props.addToCart(product)}
-                            className="primaryBtn"
-                        >
-                          Add To Cart
-                        </button>
-                      </li>
-                  ))}
-                </ul>)}
+                <div className='loading'>Loading...</div> :
+                <ul className="products">
+                  {this.props.products.map((product) => this.ProductItem(product))}
+                </ul>
+            }
           </Zoom>
         </Modal>
     );

@@ -51,7 +51,10 @@ button:active {
 a {
   text-decoration: none;
 }
-a:hover {
+.redditButton {
+  color: #fff;
+}
+a:hover, .redditButton:hover {
   color: #ff8000;
 }
 header {

@@ -1,0 +1,42 @@
+.post {
+    padding:  20px;
+    max-height: fit-content;
+    margin: 10px 0;
+}
+
+.post a:hover {
+    cursor: pointer;
+    color: #9898db;
+}
+
+.post .text {
+    flex-basis: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.post a {
+    color: #0000ff;
+    transition: 0.1s;
+    margin-left: auto;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.pagination li {
+    padding: 5px;
+    border-radius: 2px;
+    outline: none;
+}
+
+.pagination li a {
+    outline: none;
+}
+
+.pagination li:hover {
+    cursor: pointer;
+}

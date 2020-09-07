@@ -6,43 +6,44 @@ import {addToCart, changeQuantity, removeFromCart} from '../../actions/cartActio
 import formatCurrency from "../../utlis";
 
 class Cart extends Component {
+  CartItem = (item) =>
+    <li key={item._id} className='cart-item'>
+      <div className='title'>
+        <button
+            className="slimButton closeButton"
+            onClick={() => this.props.removeFromCart(item)}
+        />
+        <img src={item.image} alt={item.title}/>
+        <div>{item.title}</div>
+      </div>
+      <p className="price">{formatCurrency(item.price)}</p>
+      <div className="quantity">
+        <button
+            className="slimButton"
+            onClick={() => this.props.changeQuantity(item, "+")}
+        >
+          +
+        </button>
+        <span className='count'>{item.count}</span>
+        <button
+            className="slimButton"
+            onClick={() => this.props.changeQuantity(item, "-")}
+        >
+          -
+        </button>
+      </div>
+      <div className="total">
+        {formatCurrency(item.price * item.count)}
+      </div>
+    </li>
+
   render() {
     return (
       <ul className="cart-items">
         <li className="header">
           <p>Product</p><p>Price</p><p>Quantity</p><p>Total</p>
         </li>
-        {this.props.cartItems.map((item) => (
-            <li key={item._id} className='cart-item'>
-              <div className='title'>
-                <button
-                    className="slimButton closeButton"
-                    onClick={() => this.props.removeFromCart(item)}
-                />
-                <img src={item.image} alt={item.title}/>
-                <div>{item.title}</div>
-              </div>
-              <p className="price">{formatCurrency(item.price)}</p>
-              <div className="quantity">
-                <button
-                    className="slimButton"
-                    onClick={() => this.props.changeQuantity(item, "+")}
-                >
-                  +
-                </button>
-                <span className='count'>{item.count}</span>
-                <button
-                    className="slimButton"
-                    onClick={() => this.props.changeQuantity(item, "-")}
-                >
-                  -
-                </button>
-              </div>
-              <div className="total">
-                {formatCurrency(item.price * item.count)}
-              </div>
-            </li>
-        ))}
+        {this.props.cartItems.map((item) => this.CartItem(item))}
         <li className="footer">
           <span>Total: {formatCurrency(this.props.cartItems.reduce((a, c) => a + c.price * c.count, 0) )}</span>
         </li>

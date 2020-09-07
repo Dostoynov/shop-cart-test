@@ -4,16 +4,21 @@ import { Provider } from "react-redux";
 import Cart from "./features/Cart";
 import store from "./store";
 import ProductsModal from "./features/ProductsModal";
+import RedditModal from "./features/RedditModal";
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isModalOpen: false
+      isProductsModalOpen: false,
+      isRedditModalOpen: false,
     };
   }
-  handleModal = () => {
-    this.setState({isModalOpen: !this.state.isModalOpen})
+  handleProductsModal = () => {
+    this.setState({isProductsModalOpen: !this.state.isProductsModalOpen})
+  }
+  handleRedditModal = () => {
+    this.setState({isRedditModalOpen: !this.state.isRedditModalOpen})
   }
   render() {
     return (
@@ -21,11 +26,13 @@ class App extends Component {
         <div className="grid-container">
           <header>
             <a href='/'>Best ROCK & STONE shop</a>
-            <button onClick={this.handleModal}><img src={icon} alt=''/></button>
+            <button className='redditButton' onClick={this.handleRedditModal}>Reddit for some reason</button>
+            <button onClick={this.handleProductsModal}><img src={icon} alt=''/></button>
           </header>
           <main>
             <Cart/>
-            <ProductsModal isOpen={this.state.isModalOpen} handleModal={this.handleModal}/>
+            <ProductsModal isOpen={this.state.isProductsModalOpen} handleModal={this.handleProductsModal}/>
+            <RedditModal isOpen={this.state.isRedditModalOpen} handleModal={this.handleRedditModal}/>
           </main>
           <footer>All right is reserved.</footer>
         </div>
